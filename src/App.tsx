@@ -9,7 +9,7 @@ function App() {
     <HashRouter>
       <div>
           <h1>Welcome to Web Dev</h1>
-          <Link to="/Labs">Labs</Link> | <Link to="/Kanbas">Kanbas</Link>
+          {/* <Link to="/Labs">Labs</Link> | <Link to="/Kanbas">Kanbas</Link> */}
           <Routes>
             <Route path="/" element={<Navigate to="Labs" />} />
             <Route path="/Labs/*" element={<Labs />} />
