@@ -1,9 +1,16 @@
 import "./index.css"
 import ForegroundColors from "./ForegroundColors";
-import BackgroundColors from "./Backgroud";
+import BackgroundColors from "./BackgroundColors";
 import Boarders from "./Borders";
 import Padding from "./Padding";
 import Margins from "./Margins";
+import Corners from "./Corners";
+import Dimensions from "./Dimensions";
+import Positions from "./Positions";
+import Zindex from "./Zindex";
+import Float from "./Float";
+import GridLayout from "./GridLayout";
+import Flex from "./Flex";
 
 export default function Lab2() {
     return (
@@ -56,11 +63,34 @@ export default function Lab2() {
                 </div>
             </div>
             </div>
+            <h1 style={{
+            backgroundColor: "yellow"}}>
+            Block vs inline elements
+            </h1>
+            <p style={{
+            backgroundColor: "blue",
+            color:"white"}}>
+            Headings ... width</p>
+            Normal text renders inline
+            <br/><br/>
+            <span style={{
+            backgroundColor: "red", color:"white"}}>Span elements</span>
+            <span style={{
+            backgroundColor: "red", color:"white"}}>render inline</span> with the rest of the content
+
             <ForegroundColors/>
             <BackgroundColors/>
             <Boarders/>
             <Padding/>
             <Margins/>
+            <Corners/>
+            <Dimensions/>
+            <Positions/>
+            <Zindex/>
+            <Float/>
+            <GridLayout/> 
+            <Flex/>
+
         </div>
   ); 
 }
