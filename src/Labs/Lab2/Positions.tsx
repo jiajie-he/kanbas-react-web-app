@@ -6,9 +6,8 @@ export  default function Positions() {
         <h2>Relative</h2>
         <div className="wd-bg-color-gray">
             <div className="wd-bg-color-yellow 
-                            wd-dimension-portrait">
-            <div className="wd-pos-relative-nudge-down-right">
-                Portrait</div></div>
+                            wd-dimension-portrait wd-pos-relative-nudge-down-right">
+                Portrait</div>
             <div className="wd-pos-relative-nudge-up-right 
                 wd-bg-color-blue wd-fg-color-white 
                 wd-dimension-landscape">
