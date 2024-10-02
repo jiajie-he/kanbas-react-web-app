@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 export default function Profile() {
   return (
     <div id="wd-profile-screen">
-      <h1>Welcome to Web Dev</h1>
+      <h1>Welcome to Web Dev Landing  and Profile Page</h1> <br/>
       <h2>Jiajie He - SEC 01</h2>
       <a id="wd-github" target="_blank" href="https://github.com/jannunzi/kanbas-react-web-app-cs5610-fa24">click here </a>
       to go to relevant source code repositories
+      <br/><br/><br/><br/>
+
       <h1>Profile</h1>
       <input id="wd-username" value="Jiajie He" placeholder="username" className="form-control mb-2"/>
       <input id="wd-password" value="123" placeholder="password"
