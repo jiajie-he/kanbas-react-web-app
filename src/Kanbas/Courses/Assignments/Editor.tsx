@@ -1,16 +1,20 @@
-import React from "react";
+import { useParams, Link } from "react-router-dom";
+import * as db from "../../Database";
 
 export default function AssignmentEditor() {
+  const { cid, aid } = useParams();  
+  const assignment = db.assignments.find((a: any) => a._id === aid);
+  if (!assignment) {
+    return <div>Assignment1234</div>;  
+  }
   return (
     <div id="wd-assignments-editor" className="container my-4">      
       <div className="mb-3">
-        <label htmlFor="wd-name" className="form-label">
-          Assignment Name
-        </label>
+      <label htmlFor="wd-name" className="form-label">Assignment Name</label>
         <input
           id="wd-name"
           className="form-control"
-          defaultValue="A1 - ENV + HTML"
+          defaultValue={assignment.title}  
         />
       </div>
 
@@ -50,7 +54,6 @@ export default function AssignmentEditor() {
         </div>
       </div>
 
-      {/* Display Grade As Row */}
       <div className="mb-3 row">
         <div className="col-md-6">
           <label htmlFor="wd-display-grade-as" className="form-label">
@@ -75,7 +78,6 @@ export default function AssignmentEditor() {
         </div>
       </div>
 
-      {/* Online Entry Options */}
       <div className="mb-3">
         <label>Online Entry Options</label><br />
         <div>
@@ -110,7 +112,6 @@ export default function AssignmentEditor() {
         </div>
       </div>
 
-      {/* Available From and Until Row */}
       <div className="mb-3 row">
         <div className="col-md-6">
           <label htmlFor="wd-available-from" className="form-label">
@@ -127,8 +128,8 @@ export default function AssignmentEditor() {
       </div>
 
       <div className="d-flex justify-content-end">
-        <button className="btn btn-secondary me-2">Cancel</button>
-        <button className="btn btn-danger">Save</button>
+        <Link to={`/Kanbas/Courses/${cid}/Assignments`} className="btn btn-secondary me-2">Cancel</Link>
+        <Link to={`/Kanbas/Courses/${cid}/Assignments`} className="btn btn-danger">Save</Link>
       </div>
     </div>
   );
