@@ -15,7 +15,7 @@ export default function Profile() {
       <input id="wd-firstname" value="Jiajie" placeholder="First Name" className="form-control mb-2"/>
       <input id="wd-lastname" value="He" placeholder="Last Name" className="form-control mb-2"/>
       <input id="wd-dob" value="2000-01-01" type="date" className="form-control mb-2"/>
-      <input id="wd-email" value="alice@wonderland" type="email" className="form-control mb-2"/>
+      <input id="wd-email" value="web@dev" type="email" className="form-control mb-2"/>
       <select id="wd-role" className="form-control mb-2">
         <option value="USER">User</option>
         <option value="ADMIN">Admin</option>
