@@ -1,47 +1,101 @@
 [
     {
-    "_id": "A101",
-    "title": "Propulsion Assignment",
-    "course": "RS101"
+        "_id": "A101",
+        "title": "Propulsion Assignment",
+        "description": "An in-depth look into propulsion systems.",
+        "points": 100,
+        "dueDate": "2024-11-10",
+        "availableFrom": "2024-10-01",
+        "availableUntil": "2024-11-12",
+        "course": "RS101",
+        "group": "Assignments"
     },
     {
-    "_id": "A102",
-    "title": "Combustion Analysis",
-    "course": "RS101"
+        "_id": "A102",
+        "title": "Combustion Analysis",
+        "description": "A detailed analysis of combustion processes.",
+        "points": 90,
+        "dueDate": "2024-11-15",
+        "availableFrom": "2024-10-05",
+        "availableUntil": "2024-11-16",
+        "course": "RS101",
+        "group": "Assignments"
     },
     {
-    "_id": "A103",
-    "title": "Nozzle Design Project",
-    "course": "RS101"
+        "_id": "A103",
+        "title": "Nozzle Design Project",
+        "description": "Design and analyze various nozzle structures.",
+        "points": 120,
+        "dueDate": "2024-11-20",
+        "availableFrom": "2024-10-10",
+        "availableUntil": "2024-11-21",
+        "course": "RS101",
+        "group": "Projects"
     },
     {
-    "_id": "A201",
-    "title": "Aerodynamics Quiz",
-    "course": "RS102"
+        "_id": "A201",
+        "title": "Aerodynamics Quiz",
+        "description": "Quiz covering key aerodynamic principles.",
+        "points": 50,
+        "dueDate": "2024-10-25",
+        "availableFrom": "2024-10-15",
+        "availableUntil": "2024-10-26",
+        "course": "RS102",
+        "group": "Quizzes"
     },
     {
-    "_id": "A202",
-    "title": "Flow Analysis",
-    "course": "RS102"
+        "_id": "A202",
+        "title": "Flow Analysis",
+        "description": "Analysis of fluid flow in various conditions.",
+        "points": 110,
+        "dueDate": "2024-11-05",
+        "availableFrom": "2024-10-20",
+        "availableUntil": "2024-11-06",
+        "course": "RS102",
+        "group": "Assignments"
     },
     {
-    "_id": "A203",
-    "title": "Heating Analysis",
-    "course": "RS102"
+        "_id": "A203",
+        "title": "Heating Analysis",
+        "description": "Detailed study of heating effects in aerodynamics.",
+        "points": 80,
+        "dueDate": "2024-11-15",
+        "availableFrom": "2024-10-25",
+        "availableUntil": "2024-11-16",
+        "course": "RS102",
+        "group": "Assignments"
     },
     {
-    "_id": "A301",
-    "title": "Structural Design Task",
-    "course": "RS103"
+        "_id": "A301",
+        "title": "Structural Design Task",
+        "description": "Structural design principles applied to rockets.",
+        "points": 95,
+        "dueDate": "2024-12-01",
+        "availableFrom": "2024-11-01",
+        "availableUntil": "2024-12-02",
+        "course": "RS103",
+        "group": "Projects"
     },
     {
-    "_id": "A302",
-    "title": "Orbital Calculations",
-    "course": "RS103"
+        "_id": "A302",
+        "title": "Orbital Calculations",
+        "description": "Calculations related to orbital mechanics.",
+        "points": 105,
+        "dueDate": "2024-12-10",
+        "availableFrom": "2024-11-05",
+        "availableUntil": "2024-12-11",
+        "course": "RS103",
+        "group": "Assignments"
     },
     {
-    "_id": "A303",
-    "title": "Systems Engineering Exam",
-    "course": "RS103"
+        "_id": "A303",
+        "title": "Systems Engineering Exam",
+        "description": "Comprehensive exam on systems engineering.",
+        "points": 150,
+        "dueDate": "2024-12-15",
+        "availableFrom": "2024-11-10",
+        "availableUntil": "2024-12-16",
+        "course": "RS103",
+        "group": "Exams"
     }
-    ]
+]

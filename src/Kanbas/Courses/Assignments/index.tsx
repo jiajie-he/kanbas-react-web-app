@@ -4,10 +4,13 @@ import AssignmentControlButtons from "./AssignmentControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { useParams, Link } from "react-router-dom";
 import * as db from "../../Database"; 
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Assignments() {
   const { cid } = useParams();  
-  const assignments = db.assignments;  
+  // const assignments = db.assignments;  
+  const { assignments } = useSelector((state: any) => state.assignmentsReducer);
+  const dispatch = useDispatch();
 
   
   const filteredAssignments = assignments.filter((assignment: any) => assignment.course === cid);
