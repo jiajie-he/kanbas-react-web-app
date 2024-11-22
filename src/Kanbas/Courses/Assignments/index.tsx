@@ -4,13 +4,19 @@ import AssignmentControlButtons from "./AssignmentControlButtons";
 import { BsGripVertical } from "react-icons/bs";
 import { useParams, Link } from "react-router-dom";
 import * as db from "../../Database"; 
+import { useState } from "react";
 
 export default function Assignments() {
   const { cid } = useParams();  
   const assignments = db.assignments;  
 
-  
   const filteredAssignments = assignments.filter((assignment: any) => assignment.course === cid);
+
+  const [assignmentList, setAssignmentList] = useState<any[]>(filteredAssignments);
+
+  const deleteAssignment = (assignmentId: any) => {
+    setAssignmentList(assignmentList.filter((assignment) => assignment._id !== assignmentId));
+  };
 
   return (
     <div>
@@ -24,7 +30,7 @@ export default function Assignments() {
           </div>
 
           <ul className="wd-lessons list-group rounded-0">
-            {filteredAssignments.map((assignment: any) => (
+            {assignmentList.map((assignment: any) => (
               <li key={assignment._id} className="wd-assignment-list-item list-group-item p-3 d-flex">
                 <BsGripVertical className="me-3 fs-4 align-self-center" />
                 <div className="flex-grow-1">
@@ -33,7 +39,7 @@ export default function Assignments() {
                   </Link>
                 </div>
                 <div className="align-self-center">
-                  <AssignmentControlButtons />
+                  <AssignmentControlButtons deleteAssignment={deleteAssignment} assignmentId={assignment._id} />
                 </div>
               </li>
             ))}

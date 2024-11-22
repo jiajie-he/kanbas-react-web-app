@@ -6,12 +6,11 @@ import Modules from "./Modules";
 import { Navigate, Route, Routes, useParams, useLocation } from "react-router";
 import { FaAlignJustify } from "react-icons/fa";
 import PeopleTable from "./People/Table";
-import { courses } from "../Database";
 
-export default function Courses() {
+export default function Courses({ courses }: { courses: any[]; }) {
   const { cid } = useParams();
-  const { pathname } = useLocation();
   const course = courses.find((course) => course._id === cid);
+  const { pathname } = useLocation();
 
   return (
     <div id="wd-courses">
@@ -21,10 +20,10 @@ export default function Courses() {
       </h2>
       <hr />
       <div className="d-flex">
-        <div className="d-none d-md-block">
+        <div className="d-none d-md-block sidebar-navigation">
           <CoursesNavigation />
         </div>
-        <div className="flex-fill">
+        <div className="flex-fill main-content">
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />
