@@ -46,13 +46,11 @@ export default function Modules() {
 
   return (
     <div>
-      {currentUser?.role === "FACULTY" && (
         <ModulesControls
           moduleName={moduleName}
           setModuleName={setModuleName}
           addModule={createModuleForCourse}
         />
-      )}
 
       <br /><br /><br /><br />
 
@@ -76,20 +74,17 @@ export default function Modules() {
                     defaultValue={module.name}
                   />
                 )}
-                {currentUser?.role === "FACULTY" && (
                   <ModuleControlButtons
                     moduleId={module._id}
                     deleteModule={(moduleId) => removeModule(moduleId)}
                     editModule={(moduleId) => dispatch(editModule(moduleId))}
                   />
-                )}
               </div>
               <ul className="wd-lessons list-group rounded-0">
                 {module.lessons &&
                   module.lessons.map((lesson: any) => (
                     <li className="wd-lesson list-group-item p-3 ps-1">
                       {lesson.name}
-                      {currentUser?.role === "FACULTY" && <LessonControlButtons />}
                     </li>
                   ))}
               </ul>
